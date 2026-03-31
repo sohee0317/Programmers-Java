@@ -1,19 +1,9 @@
 class Solution {
     public int solution(int a, int b) {
-        int answer = 0;
-        
-        String abStr = "" + a + b;
-        int abNo = Integer.parseInt(abStr);
-        
-        int abPlus = 2 * a * b;
-        
-        if (abNo > abPlus) {
-            answer = abNo;
-        } else if (abNo == abPlus) {
-            answer = abNo;
-        } else {
-            answer = abPlus;
-        }
-        return answer;
+        StringBuilder temp = new StringBuilder();
+        temp.append(a).append(b);
+        int ab = Integer.parseInt(temp.toString());
+        int TwoAb = 2 * a * b;
+        return Math.max(ab, TwoAb);
     }
 }
