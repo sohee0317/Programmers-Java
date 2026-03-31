@@ -1,7 +1,10 @@
+import java.util.stream.IntStream;
+import java.util.stream.Collectors;
+
 class Solution {
     public String solution(String my_string, int k) {
-        StringBuilder answer = new StringBuilder();
-        for (int i = 0; i < k; i++) answer.append(my_string);
-        return answer.toString();
+        return IntStream.range(0, k)
+            .mapToObj(i -> my_string)
+            .collect(Collectors.joining());
     }
 }
