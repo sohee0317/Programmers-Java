@@ -11,6 +11,7 @@ public class Solution {
             if (Character.isUpperCase(c)) answer.append(Character.toLowerCase(c));
             else answer.append(Character.toUpperCase(c));
         }
+        
         System.out.println(answer.toString());
     }
 }
